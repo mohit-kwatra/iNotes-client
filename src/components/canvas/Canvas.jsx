@@ -80,14 +80,14 @@ const Canvas = () => {
 
       ctx.current = canvas.current.getContext("2d");
       for (let i = 0; i < 100; i++) {
-        const radius = Math.floor(Math.random() * 11) + 5;
+        const radius = Math.floor(Math.random() * 3) + 3; // 3 - 5
         const pos = {
           x: Math.floor(Math.random() * (sizes.x - radius * 2 + 1)) + radius,
           y: Math.floor(Math.random() * (sizes.y - radius * 2 + 1)) + radius,
         };
         const val = {
-          x: Math.random() - 0.5,
-          y: Math.random() - 0.5,
+          x: (Math.random() - 0.5) * 0.2,
+          y: (Math.random() - 0.5) * 0.2,
         };
         const fillColor = colors[Math.floor(Math.random() * colors.length)];
 
